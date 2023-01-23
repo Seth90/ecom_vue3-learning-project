@@ -44,9 +44,9 @@ const aboutBrands = [
     &__title {
         text-align: center;
         font-size: 24px;
-        color: #2a254B;
+        color: var(--black);
         margin: 0 0 84px 0;
-        font-family: 'Clash Display', sans-serif;
+        font-family: var(--clash);
         font-weight: 400;
     }
 
@@ -57,7 +57,7 @@ const aboutBrands = [
     }
 
     &-element {
-        color: #2a254B;
+        color: var(--black);
 
         &__img {
             display: block;

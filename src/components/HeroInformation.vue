@@ -32,7 +32,7 @@ const props = defineProps({
     },
     colorLink: {
         type: String,
-        default: '#2A254B'
+        default: '#2a254b'
     },
     background: {
         type: String,
@@ -53,7 +53,7 @@ const props = defineProps({
         justify-content: space-between;
 
         &__title {
-            font-family: 'Clash Display', sans-serif;
+            font-family: var(--clash);
             font-weight: 400;
             font-size: 32px;
             line-height: 1.5;
@@ -61,14 +61,14 @@ const props = defineProps({
         }
 
         &-description {
-            color: #5B5676;
-            font-family: 'Satoshi', sans-serif;
+            color: var(--lightGray);
+            font-family: var(--satoshi);
             font-weight: 400;
             font-size: 18px;
         }
 
         &-link {
-            color: #2A254B;
+            color: var(--black);
             text-decoration: none;
             width: 170px;
             height: 56px;

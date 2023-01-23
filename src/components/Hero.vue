@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import HeroInformation from './HeroInformation.vue';
+import HeroInformation from '@/Components/HeroInformation.vue';
 </script>
 
 <style lang="scss">

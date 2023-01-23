@@ -35,10 +35,10 @@ const props = defineProps({
     }
     &-name {
         display: block;
-        color: #2a254B;
+        color: var(--black);
         font-size: 24px;
         line-height: 20px;
-        font-family: 'Clash Display', sans-serif;
+        font-family: var(--clash);
         margin-bottom: 8px;
         text-decoration: none;
         &:hover {
@@ -48,7 +48,7 @@ const props = defineProps({
     &-price {
         display: block;
         font-size: 18px;
-        color: #2a254B;
+        color: var(--black);
     }
 }
 </style>

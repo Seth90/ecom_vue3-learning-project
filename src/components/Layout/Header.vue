@@ -70,10 +70,10 @@
         }
     }
     &-logo {
-        color: #22202E;
+        color: #22202e;
         font-size: 24px;
         text-decoration: none;
-        font-family: 'Clash Display', sans-serif;
+        font-family: var(--clash);
         text-align: center;
         &:hover {
             text-decoration: underline;
@@ -86,7 +86,7 @@
         align-items: center;
         &__link {
             margin: 0 22px;
-            color: #726EBD;
+            color: var(--gray);
             text-decoration: none;
             &:hover {
                 text-decoration: underline;
