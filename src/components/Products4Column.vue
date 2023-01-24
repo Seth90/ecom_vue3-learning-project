@@ -1,20 +1,21 @@
 <template>
     <div class="products-container">
         <div class="products">
-            <Product 
-            v-for="product of products" 
-            :key="product.id" 
-            :img="product.img" 
-            :title="product.title"
-            :price="product.price" />
+            <Product v-for="product of products" :key="product.id" :img="product.img" :title="product.title"
+                :price="product.price" />
         </div>
-        <a href="#" class="products-link">View collection</a>
+        <div class="products-link">
+            <uiButton color="lightgray" type="link" to="/">
+                View collection
+            </uiButton>
+        </div>
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import Product from '@/components/Product.vue'
+import uiButton from '@/components/UI/Button.vue'
 
 const products = ref([
     {
@@ -45,21 +46,21 @@ const products = ref([
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .products {
     padding: 0 80px;
     display: flex;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 20px;
     margin-bottom: 64px;
+
     &-container {
         margin-bottom: 56px;
     }
+
     &-link {
-        display: block;
         text-align: center;
-        color: var(--black);
-        text-decoration: none;
+
         &:hover {
             text-decoration: underline;
         }

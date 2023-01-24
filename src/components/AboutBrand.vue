@@ -44,7 +44,7 @@ const aboutBrands = [
     &__title {
         text-align: center;
         font-size: 24px;
-        color: var(--black);
+        color: var(--primary);
         margin: 0 0 84px 0;
         font-family: var(--clash);
         font-weight: 400;
@@ -57,7 +57,7 @@ const aboutBrands = [
     }
 
     &-element {
-        color: var(--black);
+        color: var(--primary);
 
         &__img {
             display: block;

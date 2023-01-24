@@ -4,10 +4,9 @@
             title="It started with a small idea"
             description="A global brand with local beginnings, our story begain in a small studio in South London in early 2014"
             link="#"
-            background="var(--black)"
+            background="var(--primary)"
             colorTitle="#fff"
             colorDescription="#fff"
-            colorLink="#fff"
         />
         <img src="/imgs/room.jpg" alt="room">
         
@@ -18,7 +17,7 @@
 import HeroInformation from './HeroInformation.vue'
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .ideas {
     padding: 0 80px;
     margin-bottom: 60px;

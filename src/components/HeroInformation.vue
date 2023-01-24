@@ -4,11 +4,15 @@
             <h2 :style="{ color: colorTitle }" class="hero-info__title">{{ title }}</h2>
             <span :style="{ color: colorDescription }" class="hero-info__description">{{ description }}</span>
         </div>
-        <a :href="link" class="hero-info-link" :style="{ color: colorLink }">View collection</a>
+        <uiButton :color="colorLink || 'secondary'" type="link" to="/">
+            View collection
+        </uiButton>
+        <!-- <a :href="link" class="hero-info-link" :style="{ color: colorLink }">View collection</a> -->
     </div>
 </template>
 
 <script setup>
+import uiButton from '@/components/UI/Button.vue'
 const props = defineProps({
     title: {
         type: String,
@@ -32,7 +36,8 @@ const props = defineProps({
     },
     colorLink: {
         type: String,
-        default: '#2a254b'
+        //default: '#2a254b'
+        required: false
     },
     background: {
         type: String,
@@ -41,7 +46,7 @@ const props = defineProps({
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hero {
     &-info {
         background: #fff;
@@ -51,7 +56,7 @@ const props = defineProps({
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
+        align-items: flex-start;
         &__title {
             font-family: var(--clash);
             font-weight: 400;
@@ -65,22 +70,6 @@ const props = defineProps({
             font-family: var(--satoshi);
             font-weight: 400;
             font-size: 18px;
-        }
-
-        &-link {
-            color: var(--black);
-            text-decoration: none;
-            width: 170px;
-            height: 56px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(249, 249, 249, 0.15);
-            transition: 0.3s;
-            cursor: pointer;
-            &:hover {
-                background: rgba(249, 249, 249, 0.30);
-            }
         }
     }
 }

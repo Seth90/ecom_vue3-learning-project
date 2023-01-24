@@ -1,7 +1,10 @@
 <template>
     <div class="hero">
-        <HeroInformation title="Luxury homeware for people who love timeless design quality"
-            description="Shop the new Spring 2022 collection today" link="#" />
+        <HeroInformation 
+            title="Luxury homeware for people who love timeless design quality"
+            description="Shop the new Spring 2022 collection today" 
+            link="#"
+            colorLink="lightgray" />
     </div>
 </template>
 
@@ -9,7 +12,7 @@
 import HeroInformation from '@/Components/HeroInformation.vue';
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hero {
     background: url('/imgs/hero.jpg');
     height: 704px;

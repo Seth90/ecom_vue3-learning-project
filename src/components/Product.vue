@@ -1,10 +1,10 @@
 <template>
     <div>
         <div class="product">
-            <a href="#">
+            <router-link to="#">
                 <img :src="img" :alt="title" class="product-img">
-            </a>
-            <a href="#" class="product-name">{{title}}</a>
+            </router-link>
+            <router-link to="#" class="product-name">{{title}}</router-link>
             <span class="product-price">£{{price}}</span>
         </div>
     </div>
@@ -27,7 +27,7 @@ const props = defineProps({
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .product {
     &-img {
        display: block;
@@ -35,7 +35,7 @@ const props = defineProps({
     }
     &-name {
         display: block;
-        color: var(--black);
+        color: var(--primary);
         font-size: 24px;
         line-height: 20px;
         font-family: var(--clash);
@@ -48,7 +48,7 @@ const props = defineProps({
     &-price {
         display: block;
         font-size: 18px;
-        color: var(--black);
+        color: var(--primary);
     }
 }
 </style>

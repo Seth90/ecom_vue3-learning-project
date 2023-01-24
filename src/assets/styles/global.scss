@@ -5,7 +5,7 @@
 :root {
     --satoshi: 'Satoshi', sans-serif;
     --clash: 'Clash Display', sans-serif;
-    --black: #2a254b;
+    --primary: #2a254b;
     --gray: #726e8d;
     --lightGray: #5b5676;
 }
@@ -19,9 +19,15 @@ body {
     padding: 0;
     font-family: var(--satoshi);
     font-size: 16px;
-    color: var(--black);
+    color: var(--primary);
 }
 .container {
     max-width: 1440px;
     margin: auto;
+}
+.input-text {
+    height: 56px;
+    padding: 0 32px;
+    font-size: 16px;
+    border: none;
 }
