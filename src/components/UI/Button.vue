@@ -1,6 +1,6 @@
 <template>
     <button v-if="type === 'button'" :class="['btn', {
-        'btn--primary': color === 'primary',
+        'btn--dark-primary': color === 'primary',
         'btn--secondary': color === 'secondary',
         'btn--lightGray': color === 'lightgray',
         'btn--white': color === 'white'
@@ -8,7 +8,7 @@
         <slot />
     </button>
     <router-link v-else :to="to" :class="['btn', {
-        'btn--primary': color === 'primary',
+        'btn--dark-primary': color === 'primary',
         'btn--secondary': color === 'secondary',
         'btn--lightgray': color === 'lightgray',
         'btn--white': color === 'white'
@@ -41,7 +41,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .btn {
-    background: var(--primary);
+    background: var(--dark-primary);
     border: none;
     color: #fff;
     padding: 0 32px;
@@ -52,14 +52,14 @@ const props = defineProps({
     font-size: 16px;
     height: 56px;
     text-decoration: none;
-
+    
     &:hover {
         text-decoration: underline;
         opacity: 0.8;
     }
 
-    &--primary {
-        background: var(--primary);
+    &--dark-primary {
+        background: var(--dark-primary);
         color: #fff;
     }
 
@@ -70,14 +70,14 @@ const props = defineProps({
 
     &--lightgray {
         background: #F9F9F9;
-        color: var(--primary)
+        color: var(--dark-primary)
     }
     &--white {
         background: #fff;
-        color: var(--primary)
+        color: var(--dark-primary)
     }
 
-    // color: var(--primary);
+    // color: var(--dark-primary);
     // text-decoration: none;
     // width: 170px;
     // height: 56px;

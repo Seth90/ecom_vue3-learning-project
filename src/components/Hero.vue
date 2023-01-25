@@ -16,12 +16,11 @@ import HeroInformation from '@/Components/HeroInformation.vue';
 .hero {
     background: url('/imgs/hero.jpg');
     height: 704px;
-    background-size: cover;
+    background-size: auto;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 80px;
-
     &-img {
         max-width: 100%;
     }

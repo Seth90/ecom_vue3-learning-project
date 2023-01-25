@@ -31,11 +31,12 @@ const props = defineProps({
 .product {
     &-img {
        display: block;
+       width: 100%;
        margin-bottom: 24px;
     }
     &-name {
         display: block;
-        color: var(--primary);
+        color: var(--dark-primary);
         font-size: 24px;
         line-height: 20px;
         font-family: var(--clash);
@@ -48,7 +49,7 @@ const props = defineProps({
     &-price {
         display: block;
         font-size: 18px;
-        color: var(--primary);
+        color: var(--dark-primary);
     }
 }
 </style>

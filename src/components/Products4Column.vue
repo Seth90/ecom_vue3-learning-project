@@ -49,10 +49,14 @@ const products = ref([
 <style lang="scss" scoped>
 .products {
     padding: 0 80px;
-    display: flex;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
     margin-bottom: 64px;
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
 
     &-container {
         margin-bottom: 56px;
