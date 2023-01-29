@@ -7,8 +7,7 @@
             id="" 
             class="input-text subscribe-form__input"
             :style="{backgroundColor: bgInput, color: colorText}">
-        <uiButton :color="colorButton || 'primary'">
-            SignUp
+        <uiButton :color="colorButton || 'primary'" text="Sign Up">
         </uiButton>
     </form>
 </template>

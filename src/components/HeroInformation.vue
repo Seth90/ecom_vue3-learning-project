@@ -4,8 +4,12 @@
             <h2 :style="{ color: colorTitle }" class="hero-info__title">{{ title }}</h2>
             <span :style="{ color: colorDescription }" class="hero-info__description">{{ description }}</span>
         </div>
-        <uiButton :color="colorLink || 'secondary'" type="link" to="/">
-            View collection
+        <uiButton 
+            :color="colorLink || 'secondary'" 
+            type="link" 
+            text="View collection" 
+            to="/">
+            
         </uiButton>
         <!-- <a :href="link" class="hero-info-link" :style="{ color: colorLink }">View collection</a> -->
     </div>
@@ -61,7 +65,7 @@ const props = defineProps({
             font-family: var(--clash);
             font-weight: 400;
             font-size: 32px;
-            line-height: 1.5;
+            //line-height: 1.5;
             margin: 0 0 20px;
         }
 

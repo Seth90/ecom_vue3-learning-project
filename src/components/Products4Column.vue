@@ -5,8 +5,7 @@
                 :price="product.price" />
         </div>
         <div class="products-link">
-            <uiButton color="lightgray" type="link" to="/">
-                View collection
+            <uiButton color="lightgray" type="link" to="/" text="View collection">s
             </uiButton>
         </div>
     </div>

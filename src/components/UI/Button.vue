@@ -5,7 +5,7 @@
         'btn--lightGray': color === 'lightgray',
         'btn--white': color === 'white'
     }]">
-        <slot />
+        {{ text }}
     </button>
     <router-link v-else :to="to" :class="['btn', {
         'btn--dark-primary': color === 'primary',
@@ -13,7 +13,8 @@
         'btn--lightgray': color === 'lightgray',
         'btn--white': color === 'white'
     }]">
-        <slot />
+        <!-- <slot /> -->
+        {{ text }}
     </router-link>
 </template>
 
@@ -34,6 +35,10 @@ const props = defineProps({
     color: {
         type: String,
         default: 'primary'
+    },
+    text: {
+        type: String,
+        required: true
     }
 })
 
@@ -52,7 +57,7 @@ const props = defineProps({
     font-size: 16px;
     height: 56px;
     text-decoration: none;
-    
+    white-space: nowrap;
     &:hover {
         text-decoration: underline;
         opacity: 0.8;
@@ -72,6 +77,7 @@ const props = defineProps({
         background: #F9F9F9;
         color: var(--dark-primary)
     }
+
     &--white {
         background: #fff;
         color: var(--dark-primary)
