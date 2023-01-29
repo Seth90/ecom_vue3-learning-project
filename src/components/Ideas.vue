@@ -24,6 +24,12 @@ import HeroInformation from '@/Components/HeroInformation.vue'
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 16px;
+
+    @media screen and (max-width: 767px) {
+        padding: 0px 24px 32px 24px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
     &-image {
         width: 100%;
         height: 100%;

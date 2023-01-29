@@ -41,6 +41,10 @@ const aboutBrands = [
 .about-brand {
     padding: 88px 80px 130px 80px;
 
+    @media screen and (max-width: 767px) {
+        padding: 48px 24px;
+    }
+
     &__title {
         text-align: center;
         font-size: 24px;
@@ -48,6 +52,12 @@ const aboutBrands = [
         margin: 0 0 84px 0;
         font-family: var(--clash);
         font-weight: 400;
+
+        @media screen and (max-width: 767px) {
+            text-align: left;
+            font-size: 20px;
+            margin-bottom: 36px;
+        }
     }
 
     &-elements {
@@ -56,15 +66,23 @@ const aboutBrands = [
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 22px;
         justify-content: space-between;
+
         @media screen and (max-width: 1024px) {
             grid-template-columns: repeat(2, 1fr);
-            gap: 40px 20px;
+            gap: 20px;
+        }
+        @media screen and (max-width: 767px) {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 
     &-element {
         color: var(--dark-primary);
-
+        background: var(--lightGray);
+        padding: 48px;
+        @media screen and (max-width: 767px) {
+            padding: 36px 24px;
+        }
         &__img {
             display: block;
             margin-bottom: 12px;

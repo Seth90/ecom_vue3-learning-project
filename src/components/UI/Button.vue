@@ -3,7 +3,8 @@
         'btn--dark-primary': color === 'primary',
         'btn--secondary': color === 'secondary',
         'btn--lightGray': color === 'lightgray',
-        'btn--white': color === 'white'
+        'btn--white': color === 'white',
+        'btn--fullWidth': mobileFullWidth
     }]">
         {{ text }}
     </button>
@@ -11,7 +12,8 @@
         'btn--dark-primary': color === 'primary',
         'btn--secondary': color === 'secondary',
         'btn--lightgray': color === 'lightgray',
-        'btn--white': color === 'white'
+        'btn--white': color === 'white',
+        'btn--fullWidth': mobileFullWidth
     }]">
         <!-- <slot /> -->
         {{ text }}
@@ -39,6 +41,10 @@ const props = defineProps({
     text: {
         type: String,
         required: true
+    },
+    mobileFullWidth: {
+        type: Boolean,
+        default: false
     }
 })
 
@@ -58,6 +64,7 @@ const props = defineProps({
     height: 56px;
     text-decoration: none;
     white-space: nowrap;
+
     &:hover {
         text-decoration: underline;
         opacity: 0.8;
@@ -81,6 +88,11 @@ const props = defineProps({
     &--white {
         background: #fff;
         color: var(--dark-primary)
+    }
+    &--fullWidth {
+        @media screen and (max-width: 767px){
+            width: 100%;
+        }
     }
 
     // color: var(--dark-primary);

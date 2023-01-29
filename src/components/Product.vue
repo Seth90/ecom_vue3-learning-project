@@ -37,11 +37,14 @@ const props = defineProps({
     &-name {
         display: block;
         color: var(--dark-primary);
-        font-size: 24px;
-        line-height: 20px;
+        font-size: 20px;
+        //line-height: 1.4;
         font-family: var(--clash);
         margin-bottom: 8px;
         text-decoration: none;
+        @media screen and (max-width: 767px) {
+            font-size: 16px;
+        }
         &:hover {
             text-decoration: underline;
         }

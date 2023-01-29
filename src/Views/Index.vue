@@ -1,11 +1,10 @@
 <template>
     <div class="container">
-        <Header />
         <Hero />
         <AboutBrand />
         <Products4Column />
         <Ideas/>
-        <Subscribe />
+         <!--<Subscribe /> -->
     </div>
 </template>
 
