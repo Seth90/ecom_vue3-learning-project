@@ -19,7 +19,7 @@
                     <span class="subscribe-check__name">Large discounts</span>
                 </div>
             </div>
-            <SubscribeForm/>
+            <SubscribeForm />
         </div>
 
     </div>
@@ -35,19 +35,35 @@ import SubscribeForm from '@/components/SubscribeForm.vue'
     background-size: cover;
     padding: 97px 0 86px 0;
 
+    @media screen and (max-width: 767px) {
+        padding: 24px;
+        //margin: 0 -24px;
+    }
+    @media screen and (max-width: 390px) {
+        background: url('imgs/subscribe_mobile.jpg');
+    }
+
     &-content {
         max-width: 500px;
         margin: auto;
         text-align: center;
         color: #fff;
+
+        @media screen and (max-width: 767px) {
+            text-align: left;
+        }
     }
 
     &-title {
         display: block;
         margin: 0 0 12px 0;
         font-size: 32px;
-        font-weight: 400;
+        //font-weight: 300;
         font-family: var(--clash);
+
+        @media screen and (max-width: 767px) {
+            font-size: 24px;
+        }
     }
 
     &-description {
@@ -55,18 +71,35 @@ import SubscribeForm from '@/components/SubscribeForm.vue'
         font-size: 18px;
         line-height: 1.5;
         margin-bottom: 30px;
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+        }
     }
+
     &-checks {
         display: flex;
         justify-content: center;
         margin-bottom: 40px;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            justify-content: left;
+            gap: 8px;
+        }
     }
+
     &-check {
         display: flex;
         align-items: center;
+
         &:nth-child(2) {
             margin: 0 36px;
+
+            @media screen and (max-width: 767px) {
+                margin: 0;
+            }
         }
+
         &__icon {
             margin-right: 9px;
         }

@@ -29,6 +29,7 @@ import HeroInformation from '@/Components/HeroInformation.vue'
         padding: 0px 24px 32px 24px;
         grid-template-columns: repeat(1, 1fr);
         gap: 24px;
+        margin-bottom: 0;
     }
     &-image {
         width: 100%;

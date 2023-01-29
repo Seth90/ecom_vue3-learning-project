@@ -35,6 +35,8 @@ const props = defineProps({
 <style lang="scss" scoped>
 .subscribe-form {
     display: flex;
+
+
     &__input {
         flex-grow: 1;
     }

@@ -52,9 +52,9 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .btn {
-    background: var(--dark-primary);
+    // background: var(--dark-primary);
     border: none;
-    color: #fff;
+    // color: #fff;
     padding: 0 32px;
     display: inline-flex;
     align-items: center;
@@ -64,7 +64,9 @@ const props = defineProps({
     height: 56px;
     text-decoration: none;
     white-space: nowrap;
-
+    @media screen and (max-width: 767px){
+            padding: 0 15px;
+        }
     &:hover {
         text-decoration: underline;
         opacity: 0.8;

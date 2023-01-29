@@ -4,7 +4,7 @@
         <AboutBrand />
         <Products4Column />
         <Ideas/>
-         <!--<Subscribe /> -->
+         <Subscribe />
     </div>
 </template>
 

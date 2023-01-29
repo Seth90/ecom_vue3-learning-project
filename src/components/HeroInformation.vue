@@ -77,7 +77,7 @@ const props = defineProps({
             margin: 0 0 20px;
 
             @media screen and (max-width: 767px) {
-                font-size: 24px;
+                font-size: 20px;
             }
         }
 
