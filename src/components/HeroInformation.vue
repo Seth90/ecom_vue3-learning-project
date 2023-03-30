@@ -61,6 +61,7 @@ const props = defineProps({
         @media screen and (max-width: 767px) {
             padding: 47px 24px 32px 24px;
             min-height: 0;
+            max-width: 767px;
         }
 
         &-text {

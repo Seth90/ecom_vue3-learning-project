@@ -37,11 +37,12 @@ import SubscribeForm from '@/components/SubscribeForm.vue'
 
     @media screen and (max-width: 767px) {
         padding: 24px;
+        background-image: url('imgs/subscribe_mobile.jpg');
         //margin: 0 -24px;
     }
-    @media screen and (max-width: 390px) {
-        background: url('imgs/subscribe_mobile.jpg');
-    }
+    // @media screen and (max-width: 390px) {
+    //     background: url('imgs/subscribe_mobile.jpg');
+    // }
 
     &-content {
         max-width: 500px;

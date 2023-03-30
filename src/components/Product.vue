@@ -1,10 +1,10 @@
 <template>
     <div>
         <div class="product">
-            <router-link to="#">
+            <router-link :to="`/${id}`">
                 <img :src="img" :alt="title" class="product-img">
             </router-link>
-            <router-link to="#" class="product-name">{{title}}</router-link>
+            <router-link :to="`/${id}`" class="product-name">{{title}}</router-link>
             <span class="product-price">£{{price}}</span>
         </div>
     </div>
@@ -12,6 +12,10 @@
 
 <script setup>
 const props = defineProps({
+    id: {
+        type: String,
+        required: true
+    },
     img: {
         type: String,
         required: true
@@ -33,6 +37,7 @@ const props = defineProps({
        display: block;
        width: 100%;
        margin-bottom: 24px;
+       object-fit: cover;
     }
     &-name {
         display: block;

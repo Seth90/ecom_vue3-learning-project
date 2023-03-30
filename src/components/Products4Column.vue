@@ -1,8 +1,12 @@
 <template>
     <div class="products-container">
         <div class="products">
-            <Product v-for="product of products" :key="product.id" :img="product.img" :title="product.title"
-                :price="product.price" />
+            <Product v-for="product of products"
+            :id="product.id"
+            :key="product.id" 
+            :img="product.img" 
+            :title="product.title"
+            :price="product.price" />
         </div>
         <div class="products-link">
             <uiButton :mobileFullWidth="true" color="lightgray" type="link" to="/" text="View collection">s
@@ -16,32 +20,11 @@ import { ref } from 'vue'
 import Product from '@/components/Product.vue'
 import uiButton from '@/components/UI/Button.vue'
 
-const products = ref([
-    {
-        id: 1,
-        img: '/imgs/product1.jpg',
-        title: 'The Dandy chair',
-        price: 250
-    },
-    {
-        id: 2,
-        img: '/imgs/product2.jpg',
-        title: 'Rustic Vase Set',
-        price: 155
-    },
-    {
-        id: 3,
-        img: '/imgs/product3.jpg',
-        title: 'The Silky Vase',
-        price: 125
-    },
-    {
-        id: 4,
-        img: '/imgs/product4.jpg',
-        title: 'The Lucy Lamp',
-        price: 399
+const props = defineProps({
+    products: {
+        required: true,
     }
-])
+})
 
 </script>
 

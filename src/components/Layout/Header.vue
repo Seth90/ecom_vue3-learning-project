@@ -1,9 +1,15 @@
 <template>
     <header class="header">
         <div class="header-top">
-            <div class="header-top-search">
-                <img src="/svg/header-search.svg" alt="Search">
+            <div class="header-top-left">
+                <div class="header-top-search">
+                    <img src="/svg/header-search.svg" alt="Search" class="header-top__icon">
+                </div>
+                <div class="header-top-mobile-menu" @click="isOpenedMobileMenu = !isOpenedMobileMenu">
+                    <img src="/svg/Menu.svg" alt="Menu" class="header-top__icon">
+                </div>
             </div>
+
             <router-link to="/" class="header-logo">Avion</router-link>
             <div class="header-top-right">
                 <div href="#" class="header-top-right__cart">
@@ -19,14 +25,23 @@
             </div>
         </div>
         <div class="header-menu">
-            <router-link class="header-menu__link" to="element.path" v-for="(element, i) of menu"
-                :key="i">{{ element.name }}</router-link>
+            <router-link class="header-menu__link" to="element.path" v-for="(element, i) of menu" :key="i">{{
+                element.name
+            }}</router-link>
+        </div>
+        <div class="header-menu-mobile" v-if="isOpenedMobileMenu">
+
+            <router-link class="header-menu-mobile__link" to="element.path" v-for="(element, i) of menu" :key="i">{{
+                element.name
+            }}</router-link>
         </div>
     </header>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+
+
 const menu = [
     {
         name: 'Plant pots',
@@ -41,12 +56,18 @@ const menu = [
         path: '/tables'
     }
 ]
+const isOpenedMobileMenu = ref(false);
 </script>
 
 <style lang="scss" scoped>
 .header {
     height: 132px;
     background: white;
+    position: relative;
+    @media screen and (max-width: 767px) {
+        height: auto;
+        padding: 20px 20px 27px 24px;
+    }
 
     &-top {
         display: grid;
@@ -57,10 +78,42 @@ const menu = [
         border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
         margin: 0 28px;
 
+        @media screen and (max-width: 767px) {
+            margin: 0;
+            border: none;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__icon {
+            display: block;
+        }
+        &-left {
+            display: flex;
+            align-items: center;
+            @media screen and (max-width: 767px) {
+                order: 2;
+            }
+        }
+        &-mobile-menu {
+            margin-left: 16px;
+            display: none;
+            @media screen and (max-width: 767px) {
+                display: block;
+            }
+        }
+        &-search {
+            
+        }
+
         &-right {
             display: flex;
             align-items: center;
             justify-content: flex-end;
+
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
 
             &__cart {
                 margin-right: 16px;
@@ -75,6 +128,10 @@ const menu = [
         font-family: var(--clash);
         text-align: center;
 
+        @media screen and (max-width: 767px) {
+            order: 1;
+        }
+
         &:hover {
             text-decoration: underline;
         }
@@ -86,6 +143,10 @@ const menu = [
         justify-content: center;
         align-items: center;
 
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+
         &__link {
             margin: 0 22px;
             color: #726E8D;
@@ -95,6 +156,33 @@ const menu = [
                 text-decoration: underline;
             }
         }
+        &-mobile {
+            position: absolute;
+            background: #fff;
+            padding: 40px 24px;
+            top: 60px;
+            width: 100%;
+            padding: 10px;
+            &-top {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 24px;
+            }
+            &__link {
+            display: block;
+            margin-bottom: 20px;
+            color: #726E8D;
+            text-decoration: none;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        
     }
 }
 </style>
