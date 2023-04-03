@@ -16,6 +16,7 @@
                     <router-link to="/cart">
                         <img src="/svg/header-cart.svg" alt="cart">
                     </router-link>
+                    <span class="header-top-right__count" v-if="cartStore.cart.length">{{ cartStore.cart.length }}</span>
                 </div>
                 <div href="#" class="header-top-righh__user">
                     <router-link to="/user">
@@ -40,6 +41,8 @@
 
 <script setup>
 import { ref } from 'vue';
+import {useCartStore} from '@/store/cart.js';
+const cartStore = useCartStore();
 
 
 const menu = [
@@ -117,6 +120,22 @@ const isOpenedMobileMenu = ref(false);
 
             &__cart {
                 margin-right: 16px;
+                position: relative;
+            }
+            &__count {
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: var(--primary);
+                border-radius: 50%;
+                text-decoration: none;
+                color: #fff;
+                font-size: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                bottom: 0;
+                left: 50%;
             }
         }
     }

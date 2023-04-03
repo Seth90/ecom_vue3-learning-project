@@ -31,13 +31,13 @@ import SubscribeForm from '@/components/SubscribeForm.vue'
 
 <style lang="scss" scoped>
 .subscribe {
-    background: url('imgs/subscribe.jpg');
+    background: url('@/../public/imgs/subscribe.jpg');
     background-size: cover;
     padding: 97px 0 86px 0;
 
     @media screen and (max-width: 767px) {
         padding: 24px;
-        background-image: url('imgs/subscribe_mobile.jpg');
+        background-image: url('@/../public/imgs/subscribe_mobile.jpg');
         //margin: 0 -24px;
     }
     // @media screen and (max-width: 390px) {
